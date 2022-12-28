@@ -8,8 +8,6 @@ def recursive_items(dictionary,key_str):
            return temp_dict[i]
 object1 = {"a":{"b":{"c":"d"}}}
 object2 = {"x":{"y":{"z":"a"}}}
-
-
 print(recursive_items(object2,"x/y/z"))
 
 

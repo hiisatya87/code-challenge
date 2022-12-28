@@ -1,14 +1,14 @@
 variable "instance_name" {
     type = string
 }
-variable "project" {
+variable "project_id" {
   type = string
 }
 
-variable "region" {
+variable "project_region" {
   type = string
 }
-variable "zone" {
+variable "project_zone" {
   type = string
 }
 variable "db" {

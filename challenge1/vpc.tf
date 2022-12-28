@@ -34,7 +34,6 @@ resource "google_compute_router" "router" {
 }
 
 # NAT Gateway
-# https://www.terraform.io/docs/providers/google/r/compute_router_nat.html
 resource "google_compute_router_nat" "nat" {
   name                               = "nat"
   router                             = google_compute_router.router.name

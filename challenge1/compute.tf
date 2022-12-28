@@ -60,9 +60,6 @@ resource "google_compute_instance" "database" {
   network_interface {
     network = google_compute_network.custom-vpc.id
     subnetwork = google_compute_subnetwork.private-subnet.id
-    service_account {
-    email = data.google_service_account.svc_tradeedge_linux.email
-    scopes = ["cloud-platform"]
   }
   
 access_config {

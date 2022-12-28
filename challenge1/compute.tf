@@ -75,10 +75,10 @@ access_config {
     email = "terraform@${var.project_id}.iam.gserviceaccount.com"
     scopes = ["cloud-platform"]
   }
-  
-  }
   depends_on = [ google_compute_firewall.backend-rule ]
-}
+  }
+  
+
 
 
 

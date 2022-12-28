@@ -20,3 +20,7 @@ variable "machine" {
 variable "image_type" {
   type = " string"
 }
+variable "ssh_key" {
+    description = "Public SSH key"
+    type        = string
+}

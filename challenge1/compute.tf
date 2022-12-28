@@ -18,6 +18,9 @@ resource "google_compute_instance" "webserver" {
   }
 
  metadata_startup_script = "sudo apt-get update && sudp apt-get install nginx -y && sudo systemctl start nginx"
+   metadata = {
+    ssh-keys = var.ssh_key
+  }
 
   network_interface {
     network = google_compute_network.custom-vpc.id
@@ -56,6 +59,9 @@ resource "google_compute_instance" "database" {
   }
 
   metadata_startup_script = "sudo apt-get update && sudo apt install mysql-server -y"
+    metadata = {
+    ssh-keys = var.ssh_key
+  }
 
   network_interface {
     network = google_compute_network.custom-vpc.id

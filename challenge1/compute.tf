@@ -1,3 +1,4 @@
+##########Webserver & Application Server#################
 
 resource "google_compute_instance" "webserver" {
   for_each = toset(var.instance_name)
@@ -37,7 +38,7 @@ resource "google_compute_instance" "webserver" {
   depends_on = [ google_compute_firewall.web-rule ]
 }
 
-
+########################Database Instance##############################
 
   
 resource "google_compute_instance" "database" {
